@@ -1,15 +1,13 @@
 
-const NotesModel = require('./src/models/NotesModel.js');
+const NotesModel = require('./src/models/notesModel');
+const NotesView = require('./src/views/notesView');
 
 const model = new NotesModel();
 
-console.log(model.getNotes()); // should return []
+model.addNote('Go skating');
 
-model.addNote('Buy milk');
-model.addNote('Go to the gym');
+const view = new NotesView(model);
 
-console.log(model.getNotes()); // should now return ['Buy milk', 'Go to the gym']
+view.displayNotes()
 
-model.reset();
 
-console.log(model.getNotes()); // should now return []
