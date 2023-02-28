@@ -15,17 +15,23 @@ class MessageView {
   }
 
   displayMessage() {
-    const newDiv = document.createElement('message');
+    const message = document.querySelector('#message-input').value;
+
+    const newDiv = document.createElement('div');
     newDiv.id = 'message'
-    newDiv.textContent = 'This message displayed by JavaScript.'
+    newDiv.textContent = message;
     this.mainContainer.append(newDiv);
   }
 
   hideMessage() {
-    const messageEl = document.querySelector('#message');
-    if (messageEl) {
+    const messageEls = document.querySelectorAll('#message');
+    messageEls.forEach((messageEl) => {
       this.mainContainer.removeChild(messageEl);
-    }
+    })
+    console.log(messageEls)
+    // if (messageEl) {
+    //   this.mainContainer.removeChild(messageEl);
+    // }
   }
 }
 
