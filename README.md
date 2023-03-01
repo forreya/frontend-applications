@@ -17,11 +17,11 @@ Here are some applications that are part of this repository:
 
 1. Counter Web Application 
 2. Github Repo Finder
-3. Notes App
+3. Notes App _(Note: You will need to run both the client side (notes-client) and the server side (notes-server) for the application to work fully)_
 
 ## Usage
 
-_Each of the challenges can be run individually with these steps._
+_Each application can be run individually with these steps._
 
 First, clone the entire module repository, then navigate to your desired application directory:
 
