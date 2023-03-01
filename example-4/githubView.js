@@ -10,13 +10,19 @@ class GithubView {
       const repoName = repoInputEl.value;
 
       this.client.getRepoInfo(repoName, repoData => {
-        console.log(repoData);
+        this.display(repoData)
       });
     });
   }
 
-  display() {
+  display(repoData) {
+    const name = repoData.full_name
+    const description = repoData.description
 
+    const nameEl = document.querySelector('#repo-name')
+    nameEl.textContent = name
+    const descriptionEl = document.querySelector('#repo-description')
+    descriptionEl.textContent = description
   }
 }
 
